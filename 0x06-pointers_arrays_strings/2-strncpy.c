@@ -1,29 +1,23 @@
 #include "main.h"
+
 /**
- * _strncpy - copie the string
- * @dest: array that returns
- * @src: the pointer that receive the string
- * @n: times to interate
- *
- * Return: the parameter dest.
+ * _strncpy - copy two strings only taking n bytes from src
+ * @dest: first string to be added to
+ * @src: second string to be added
+ * @n: number of bites to use from src
+ * Return: concatenated string
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	char *temp = dest;
 
-	i = 0;
-	while (i < n && src[i] != '\0')
+	for (; n != 0 && *src != '\0'; n--, src++)
 	{
-		dest[i] = src[i];
-		i++;
+		*temp = *src;
+		temp++;
 	}
-
-	i = i;
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
+	for (; n != 0 && *temp != '\0'; n--, temp++)
+		*temp = '\0';
 	return (dest);
 }
-
