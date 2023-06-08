@@ -14,13 +14,13 @@ int main(void)
     printf("%d\n", r);
     r = _pow_recursion(1024, 0);
     printf("%d\n", r);
-    r = _pow_recursion(2, 16);
+    r = _pow_recursion(9, 8);
     printf("%d\n", r);
-    r = _pow_recursion(5, 2);
+    r = _pow_recursion(402,0);
     printf("%d\n", r);
-    r = _pow_recursion(5, -2);
+    r = _pow_recursion(50, -2);
     printf("%d\n", r);
-    r = _pow_recursion(-5, 3);
+    r = _pow_recursion(-8, 5);
     printf("%d\n", r);
     return (0);
 }
