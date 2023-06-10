@@ -19,16 +19,15 @@ int mul(int a, int b)
  */
 
 int main(int argc, char *argv[])
-{
-	int a = atoi(argv[1]);
+{	
 
-	int b = atoi(argv[2]);
-
+	 int a = atoi(argv[1]);     
+        int b = atoi(argv[2]);
 	int result = mul(a, b);
 
-	if  (argc <= 2)
+	if  (argc != 3 || argv[1] == '\0' || argv[2] == '\0')
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 
 		return (1);
 	}
