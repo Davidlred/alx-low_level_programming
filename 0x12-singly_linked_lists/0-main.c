@@ -26,13 +26,13 @@ int main(void)
     new->len = 5;
     new->next = head;
     head = new;
-    n = list_printer(head);
+    n = print_list(head);
     printf("-> %lu elements\n", n);
 
     printf("\n");
     free(new->str);
     new->str = NULL;
-    n = list_printer(head);
+    n = print_list(head);
     printf("-> %lu elements\n", n);
 
     free(new);
