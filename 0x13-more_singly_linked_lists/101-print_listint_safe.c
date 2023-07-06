@@ -7,24 +7,24 @@
  */
 void free_listp(listp_t **head)
 {
-        listp_t *old;
-        listp_t *j;
+	listp_t *old;
+	listp_t *j;
 
-        if (head != NULL)
-        {
-                j = *head;
-                while ((old = j) && old != NULL)
-                {
-                        j = j->next;
-                        free(old);
-                }
-                *head = NULL;
-        }
+	if (head != NULL)
+	{
+		j = *head;
+		while ((old = j) && old != NULL)
+		{
+			j = j->next;
+			free(old);
+		}
+		*head = NULL;
+	}
+
 }
 
 /*
- * print_listint_safe - Prints the elements of a linked list
- * and handles loops in the list
+ * print_listint_safe - prints out the linked list with a loop
  * @head: a pointer to the head of a link
  * Return: number of nodes in the list
  */
