@@ -1,4 +1,4 @@
-include "hash_tables.h"
+#include "hash_tables.h"
 
 /**
  * free_list - frees a linked list
@@ -19,10 +19,10 @@ void list_free(hash_node_t *head)
 }
 
 /**
- * hash_delete - deletes a hash table
+ * hash_table_delete - deletes a hash table
  * @ht: hash table to be deleted
  */
-void hash_delete(hash_table_t *ht)
+void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int i;
 
